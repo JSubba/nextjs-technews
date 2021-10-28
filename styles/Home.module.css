@@ -9,11 +9,29 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mainImage {
+  width: 90%;
+  height: 60%;
+  margin: 2rem auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -45,56 +63,87 @@
 }
 
 .title {
-  margin: 0;
+  margin: 10px;
   line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+  font-size: 3rem;
+  color: #333;
   text-align: center;
 }
 
 .description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.code {
-  background: #fafafa;
+.input {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 40%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input:focus {
+  outline: 2px solid #8c8c8c;
+}
+
+.button {
+  display: block;
+  border-radius: 4px;
+  background-color: #a6a6a6;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1.2rem auto;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.button:hover {
+  background-color: #8c8c8c;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .grid {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   max-width: 800px;
-  margin-top: 3rem;
+  margin: 1rem auto;
+  min-height: 100vh;
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
+  margin: 0.7rem;
+  padding: 0.7rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #8c8c8c;
+  border-color: #8c8c8c;
 }
 
 .card h2 {
@@ -113,9 +162,15 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .grid {
     width: 100%;
-    flex-direction: column;
+  }
+  .mainImage {
+    width: 100%;
+    height: 40%;
+  }
+  .input {
+    width: 60%;
   }
 }
